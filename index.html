@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nikhat 🌙</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background: linear-gradient(135deg,#003c30,#00695c);
+    color:#fff;
+    overflow:hidden;
+}
+
+.moon{
+    position:absolute;
+    top:40px;
+    right:40px;
+    width:90px;
+    height:90px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 0 25px #fff;
+}
+
+.star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:gold;
+    border-radius:50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:0.3;}
+    to{opacity:1;}
+}
+
+.container{
+    margin-top:110px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    background:gold;
+    color:#003c30;
+    cursor:pointer;
+}
+
+#content{
+    display:none;
+    margin-top:30px;
+    animation:fadeIn 2s ease-in-out;
+}
+
+img{
+    width:260px;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 0 25px gold;
+}
+
+h1{
+    font-size:26px;
+    color:gold;
+}
+
+p{
+    padding:0 20px;
+    font-size:18px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<script>
+for(let i=0;i<50;i++){
+    let star=document.createElement("div");
+    star.classList.add("star");
+    star.style.top=Math.random()*100+"vh";
+    star.style.left=Math.random()*100+"vw";
+    document.body.appendChild(star);
+}
+</script>
+
+<div class="container">
+    <button onclick="showWish()">🌙 Click For Islamic Surprise 🌙</button>
+
+    <div id="content">
+        <h1>🎉 Happy Birthday Nikhat 🌸</h1>
+        <p>
+        May Allah bless you with long life, good health,<br>
+        strong Imaan and endless happiness 🤍<br>
+        Ameen 🤲✨
+        </p>
+        <img src="nikhat.jpg" alt="Nikhat">
+    </div>
+</div>
+
+<script>
+function showWish(){
+    document.getElementById("content").style.display="block";
+}
+</script>
+
+</body>
+</html>
